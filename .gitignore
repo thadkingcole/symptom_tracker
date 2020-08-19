@@ -108,6 +108,3 @@ dist
 
 # VS Code settings
 .vscode
-
-# mysql config
-config/config.json
