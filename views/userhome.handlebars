@@ -1,21 +1,25 @@
-<h1>User Homepage</h1>
-<p>This will show the user the data they have logged.</p>
-<p>This will also give the user a way of adding data CHANGE for today.</p>
-<hr>
+<header class="jumbotron jumbotron-fluid bg-maroon">
+    <div class="container">
+        <h1 class="display-4">Welcome to Myriad!</h1>
+        <p>
+            Please Remember to fill out your daily check-in.
+        </p>
+    </div>
+</header>
 <div class="container">
     <div class="row">
-        <div class="col-6 border">
-            <h1>Patient Name</h1>
+        <div class="col-6">
+            <h1>Email: {{email}} ID: {{id}}</h1>
         </div>
-        <div class"col-6 border">
+        <div class"col-6">
             <div class="month-grid"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-3 border">
+        <div class="col-2">
             <div class="symptom-grid"></div>
         </div>
-        <div class="col-9 border">
+        <div class="col-9">
             <div class="day-grid"></div>
         </div>
     </div>

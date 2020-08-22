@@ -7,23 +7,10 @@
 .border-maroon {
   border-left: 1px solid maroon;
 }
-.main-grid {
-  margin:auto;
-  width: 90%;
-  border: 1px solid maroon;
-}
-.sym-wrapper {
-  margin-top: 40px;
-  margin-left: 35px;
-  width: 95%;
-  height: 300px;
-  display: inline-flex;
-}
 .month-grid {
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-bottom:10px;
   height: 60px;
-  width:  540px;
+  width:  570px;
   display: flex;
   flex-wrap: wrap;
   float: right;
@@ -37,14 +24,14 @@
 }
 .symptom-grid {
   height: 205px;
-  width:  120px;
+  width:  160px;
   display: flex;
   flex-wrap: wrap;
-  float: right;
+  
 }
 .month {
   height: 30px;
-  width: 90px;
+  width: 94px;
   border: 1px solid black;
 }
 .day {
@@ -54,7 +41,7 @@
 }
 .symptom {
   height: 30px;
-  width: 120px;
+  width: 160px;
   border: 1px solid black;
 
 }
