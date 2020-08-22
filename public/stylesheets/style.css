@@ -7,3 +7,26 @@
 .border-maroon {
   border-left: 1px solid maroon;
 }
+.month-grid {
+  height: 60px;
+  width:  540px;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+}
+.day-grid {
+  height: 60px;
+  width:  1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.month {
+  height: 30px;
+  width: 90px;
+  border: 1px solid black;
+}
+.day {
+  height: 30px;
+  width:30px;
+  border: 1px solid black;
+}
