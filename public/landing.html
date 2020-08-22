@@ -11,13 +11,25 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-    <div class="container">
+    <!-- Header / Nav Bar -->
+    <header class="jumbotron jumbotron-fluid bg-maroon">
+      <div class="container">
+        <h1 class="display-4">Symptom Tracker</h1>
+        <p>
+          Symptom Tracker is an app that helps keep track of symptoms on a
+          day-to-day basis.
+        </p>
+      </div>
+    </header>
+    <main class="container">
       <div class="row">
         <!-- Sign Up Form -->
-        <div class="col-sm-6">
-          <h2>Sign Up</h2>
+        <div class="col-sm-6 border-maroon">
+          <h2 class="mb-3">Sign Up</h2>
           <form class="signup">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
@@ -49,13 +61,13 @@
               ></span>
               <span class="sr-only">Error:</span> <span class="msg"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="submit" class="btn bg-maroon">Sign Up</button>
           </form>
         </div>
 
         <!-- Login Form -->
-        <div class="col-sm-6">
-          <h2>Login</h2>
+        <div class="col-sm-6 border-maroon mt-5 mt-sm-0">
+          <h2 class="mb-3">Login</h2>
           <form class="login">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
@@ -75,10 +87,10 @@
                 placeholder="Password"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn bg-maroon">Login</button>
           </form>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

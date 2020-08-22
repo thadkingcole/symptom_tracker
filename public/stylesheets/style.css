@@ -1,4 +1,9 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* Maroon colors */
+.bg-maroon {
+  background-color: maroon;
+  color: white;
+}
+
+.border-maroon {
+  border-left: 1px solid maroon;
 }
