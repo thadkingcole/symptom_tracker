@@ -7,7 +7,21 @@
 .border-maroon {
   border-left: 1px solid maroon;
 }
+.main-grid {
+  margin:auto;
+  width: 90%;
+  border: 1px solid maroon;
+}
+.sym-wrapper {
+  margin-top: 40px;
+  margin-left: 35px;
+  width: 95%;
+  height: 300px;
+  display: inline-flex;
+}
 .month-grid {
+  margin-top: 10px;
+  margin-right: 10px;
   height: 60px;
   width:  540px;
   display: flex;
@@ -15,14 +29,14 @@
   float: right;
 }
 .day-grid {
-  padding-top: 20px;
+  
   height: 60px;
   width:  930px;
   display: flex;
   flex-wrap: wrap;
 }
 .symptom-grid {
-  height: 220px;
+  height: 205px;
   width:  120px;
   display: flex;
   flex-wrap: wrap;
