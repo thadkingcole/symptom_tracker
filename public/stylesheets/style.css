@@ -15,10 +15,18 @@
   float: right;
 }
 .day-grid {
+  padding-top: 20px;
   height: 60px;
-  width:  1000px;
+  width:  930px;
   display: flex;
   flex-wrap: wrap;
+}
+.symptom-grid {
+  height: 220px;
+  width:  120px;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
 }
 .month {
   height: 30px;
@@ -30,3 +38,10 @@
   width:30px;
   border: 1px solid black;
 }
+.symptom {
+  height: 30px;
+  width: 120px;
+  border: 1px solid black;
+
+}
+
