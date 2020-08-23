@@ -48,7 +48,18 @@ $(document).ready(() => {
       daySquare.innerHTML = i;
       dayGrid.appendChild(daySquare);
       daySquares.push(daySquare);
+
+      daySquare.addEventListener("click", (e) => {
+        dayClick(daySquare);
+      })
     }
+
+  }
+  function dayClick(daySquare) {
+    modal.style.display = "block";
+    const squareId = daySquare.id;
+    console.log("day click: " + squareId);
+    console.log('click');
 
   }
   function createSymptomGrid() {
