@@ -39,7 +39,7 @@ $(document).ready(() => {
       monthSquare.setAttribute("id", monthArray[i]);
       monthGrid.appendChild(monthSquare);
       monthSquares.push(monthSquare);
-    };
+    }
   };
   function createDayGrid() {
     for (i = 1; i < 32; i++) {
@@ -53,7 +53,7 @@ $(document).ready(() => {
       daySquare.addEventListener("click", () => {
         dayClick(daySquare);
       });
-    };
+    }
   };
   function dayClick(daySquare) {
     modal.style.display = "block";
@@ -66,7 +66,7 @@ $(document).ready(() => {
       rateSquares.innerHTML = i;
       ratingArea.appendChild(rateSquares);
     }
-  }
+  };
   function createSymptomGrid() {
     for (let i = 0; i < 7; i++) {
       const symptomSquare = document.createElement("div");
@@ -75,7 +75,7 @@ $(document).ready(() => {
       symptomSquare.innerHTML = symptomArray[i];
       symptomGrid.appendChild(symptomSquare);
       symptomSquares.push(symptomSquare);
-    };
+    }
   };
   function dayModal() {
     span.onclick = function () {
@@ -86,8 +86,8 @@ $(document).ready(() => {
         modal.style.display = "none";
       };
     };
-  };
-  dayModal()
+  }
+  dayModal();
   createSymptomGrid();
   createMonthGrid();
   createDayGrid();
