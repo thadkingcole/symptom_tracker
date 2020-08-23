@@ -19,21 +19,31 @@ $(document).ready(() => {
     "November",
     "December"
   ];
+  const symptomArray = [
+    "Cough",
+    "Mental Health",
+    "Headache",
+    "Muscle Ache",
+    "Energy Level",
+    "Mood",
+    "Appetite"
+  ];
   function createMonthGrid() {
     for (let i = 0; i < 12; i++) {
-      let monthSquare = document.createElement("div");
+      const monthSquare = document.createElement("div");
       monthSquare.innerHTML = monthArray[i];
       monthSquare.classList.add("month");
-      monthSquare.setAttribute("id", i);
+      monthSquare.setAttribute("id", "month_" + i);
       monthGrid.appendChild(monthSquare);
       monthSquares.push(monthSquare);
     }
   }
   function createDayGrid() {
     for (let i = 0; i < 31; i++) {
-      let daySquare = document.createElement("div");
+      const daySquare = document.createElement("div");
       daySquare.classList.add("day");
-      daySquare.setAttribute("id", i);
+      daySquare.setAttribute("id", "day_" + i);
+      daySquare.innerHTML = i;
       dayGrid.appendChild(daySquare);
       daySquares.push(daySquare);
     }
@@ -41,9 +51,10 @@ $(document).ready(() => {
   }
   function createSymptomGrid() {
     for (let i = 0; i < 7; i++) {
-      let symptomSquare = document.createElement("div");
+      const symptomSquare = document.createElement("div");
       symptomSquare.classList.add("symptom");
-      symptomSquare.setAttribute("id", i);
+      symptomSquare.setAttribute("id", "symptom_" + i);
+      symptomSquare.innerHTML = symptomArray[i];
       symptomGrid.appendChild(symptomSquare);
       symptomSquares.push(symptomSquare);
     }

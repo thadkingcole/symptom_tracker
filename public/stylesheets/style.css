@@ -34,10 +34,18 @@
   width: 94px;
   border: 1px solid black;
 }
+.month:hover {
+  color: rgb(251, 251, 209);
+  background-color: rgb(168, 245, 255);
+}
 .day {
   height: 30px;
   width:30px;
   border: 1px solid black;
+}
+.day:hover {
+  color: rgb(251, 251, 209);
+  background-color: rgb(168, 168, 255);
 }
 .symptom {
   height: 30px;
