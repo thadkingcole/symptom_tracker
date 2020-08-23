@@ -4,6 +4,7 @@ $(document).ready(() => {
   const monthGrid = document.querySelector(".month-grid");
   const dayGrid = document.querySelector(".day-grid");
   const symptomGrid = document.querySelector(".symptom-grid");
+  const ratingArea = document.querySelector(".rating-area");
   const monthSquares = [];
   const daySquares = [];
   const symptomSquares = [];
@@ -57,10 +58,15 @@ $(document).ready(() => {
   }
   function dayClick(daySquare) {
     modal.style.display = "block";
-    const squareId = daySquare.id;
-    console.log("day click: " + squareId);
-    console.log('click');
+    const squareId = daySquare
+    for(i = 0; i < 10; i++) {
+      const rateSquares = document.createElement("div");
+      rateSquares.classList.add("rate");
+      rateSquares.setAttribute("id", i);
+      rateSquares.innerHTML = i;
+      ratingArea.appendChild(rateSquares);
 
+    }
   }
   function createSymptomGrid() {
     for (let i = 0; i < 7; i++) {

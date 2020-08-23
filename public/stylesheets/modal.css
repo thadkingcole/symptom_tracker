@@ -33,3 +33,15 @@
     text-decoration: none;
     cursor: pointer;
   }
+  .rating-area {
+      height: 50px;
+      width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .rate {
+    text-align: center;
+    height: 30px;
+    width:30px;
+    border: 1px solid black;
+  }
