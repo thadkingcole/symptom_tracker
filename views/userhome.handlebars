@@ -6,14 +6,18 @@
 
   </div>
 </header>
-{{!-- daily check in form --}}
-{{!-- simply add the following partial:
 
-{{> forms/symptoms}}
-
- to include the form --}}
 
 <div class="container">
+
+  {{!-- daily check in form --}}
+  <div class="row">
+    <div class="col-6">
+      {{!-- add the below to add the form to the page --}}
+      {{> forms/symptoms}}
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-6">
       <h1>Email: {{email}}</h1>
