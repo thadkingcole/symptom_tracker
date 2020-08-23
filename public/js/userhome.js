@@ -20,7 +20,7 @@ $(document).ready(() => {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
   const symptomArray = [
     "Cough",
@@ -29,7 +29,7 @@ $(document).ready(() => {
     "Muscle Ache",
     "Energy Level",
     "Mood",
-    "Appetite"
+    "Appetite",
   ];
   function createMonthGrid() {
     for (let i = 0; i < 12; i++) {
@@ -39,8 +39,8 @@ $(document).ready(() => {
       monthSquare.setAttribute("id", monthArray[i]);
       monthGrid.appendChild(monthSquare);
       monthSquares.push(monthSquare);
-    }
-  }
+    };
+  };
   function createDayGrid() {
     for (i = 1; i < 32; i++) {
       const daySquare = document.createElement("div");
@@ -50,22 +50,21 @@ $(document).ready(() => {
       dayGrid.appendChild(daySquare);
       daySquares.push(daySquare);
 
-      daySquare.addEventListener("click", (e) => {
+      daySquare.addEventListener("click", () => {
         dayClick(daySquare);
-      })
-    }
-
-  }
+      });
+    };
+  };
   function dayClick(daySquare) {
     modal.style.display = "block";
-    const squareId = daySquare
-    for(i = 0; i < 10; i++) {
+    const squareId = daySquare.id;
+    console.log(squareId);
+    for (i = 0; i < 10; i++) {
       const rateSquares = document.createElement("div");
       rateSquares.classList.add("rate");
       rateSquares.setAttribute("id", i);
       rateSquares.innerHTML = i;
       ratingArea.appendChild(rateSquares);
-
     }
   }
   function createSymptomGrid() {
@@ -76,19 +75,18 @@ $(document).ready(() => {
       symptomSquare.innerHTML = symptomArray[i];
       symptomGrid.appendChild(symptomSquare);
       symptomSquares.push(symptomSquare);
-    }
-  }
+    };
+  };
   function dayModal() {
     span.onclick = function () {
       modal.style.display = "none";
-    }
+    };
     window.onclick = function (event) {
-      if (event.target == modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
-      }
-    }
-  }
-
+      };
+    };
+  };
   dayModal()
   createSymptomGrid();
   createMonthGrid();
@@ -99,6 +97,4 @@ $(document).ready(() => {
   createDayGrid();
   createDayGrid();
   createDayGrid();
-
-
 });
