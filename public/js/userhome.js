@@ -1,4 +1,6 @@
 $(document).ready(() => {
+  const modal = document.getElementById("dayModal");
+  const span = document.getElementById("class");
   const monthGrid = document.querySelector(".month-grid");
   const dayGrid = document.querySelector(".day-grid");
   const symptomGrid = document.querySelector(".symptom-grid");
@@ -39,7 +41,7 @@ $(document).ready(() => {
     }
   }
   function createDayGrid() {
-    for (let i = 0; i < 31; i++) {
+    for (i = 1; i < 32; i++) {
       const daySquare = document.createElement("div");
       daySquare.classList.add("day");
       daySquare.setAttribute("id", "day_" + i);
@@ -59,6 +61,18 @@ $(document).ready(() => {
       symptomSquares.push(symptomSquare);
     }
   }
+  function dayModal() {
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
+  dayModal()
   createSymptomGrid();
   createMonthGrid();
   createDayGrid();
@@ -68,4 +82,6 @@ $(document).ready(() => {
   createDayGrid();
   createDayGrid();
   createDayGrid();
+
+
 });
