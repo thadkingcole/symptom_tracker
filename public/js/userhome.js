@@ -35,7 +35,7 @@ $(document).ready(() => {
       const monthSquare = document.createElement("div");
       monthSquare.innerHTML = monthArray[i];
       monthSquare.classList.add("month");
-      monthSquare.setAttribute("id", "month_" + i);
+      monthSquare.setAttribute("id", monthArray[i]);
       monthGrid.appendChild(monthSquare);
       monthSquares.push(monthSquare);
     }
