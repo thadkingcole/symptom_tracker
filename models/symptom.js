@@ -2,18 +2,18 @@ module.exports = function (sequelize, DataTypes) {
   const Symptom = sequelize.define("Symptom", {
     runnyNose: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      defaultValue: false, // if not checked
     },
     cough: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      defaultValue: false, // if not checked
     },
     mood: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         min: 1,
-        max: 10,
+        max: 5,
       },
     },
   });

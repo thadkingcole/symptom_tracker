@@ -8,26 +8,24 @@
   border-left: 1px solid maroon;
 }
 .month-grid {
-  margin-bottom:10px;
+  margin-bottom: 10px;
   height: 60px;
-  width:  570px;
+  width: 570px;
   display: flex;
   flex-wrap: wrap;
   float: right;
 }
 .day-grid {
-  
   height: 60px;
-  width:  930px;
+  width: 930px;
   display: flex;
   flex-wrap: wrap;
 }
 .symptom-grid {
   height: 205px;
-  width:  160px;
+  width: 160px;
   display: flex;
   flex-wrap: wrap;
-  
 }
 .month {
   text-align: center;
@@ -42,9 +40,8 @@
 .day {
   text-align: center;
   height: 30px;
-  width:30px;
+  width: 30px;
   border: 1px solid black;
-  
 }
 .day:hover {
   color: rgb(251, 251, 209);
@@ -54,6 +51,4 @@
   height: 30px;
   width: 160px;
   border: 1px solid black;
-
 }
-
