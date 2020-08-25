@@ -29,17 +29,16 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       validate: {
         min: 1,
-        max: 10,
+        max: 5,
       },
     },
-      note: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [2, 160]
-        },
+    note: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [2, 160],
       },
-    
+    },
   });
 
   Symptom.associate = function (models) {

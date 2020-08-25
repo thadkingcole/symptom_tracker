@@ -1,4 +1,75 @@
-<h1>User Homepage</h1>
-<p>This will show the user the data they have logged.</p>
-<p>This will also give the user a way of adding data for today.</p>
-<h2><a href="/logout">Logout</a></h2>
+<header class="jumbotron jumbotron-fluid bg-maroon">
+  <div class="container">
+    <h1 class="display-4">Welcome to Myriad, {{email}}</h1>
+
+    <h5>Please remember to fill out your daily check-in.</h5>
+
+  </div>
+</header>
+
+
+<div class="container">
+
+  {{!-- daily check in form --}}
+  <div class="row">
+    <div class="col-7 mb-5">
+      {{!-- add the below to add the form to the page --}}
+      {{> forms/symptoms}}
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <h1>Email: {{email}}</h1>
+    </div>
+    <div class"col-6">
+      <div class="month-grid"></div>
+    </div>
+  </div>
+  {{!-- Create form div to set up POST method WILL NEED HELP SETTING THIS UP I THINK THIS IS HOW IT WORKS  --}}
+
+
+  <form action="/api/user" method="POST">
+    <div class="row">
+      <div class="col-2">
+        <h6>Symptoms:</h6>
+      </div>
+      <div class="col-9">
+        <h6>Daily Check:</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <div class="symptom-grid"></div>
+      </div>
+      <div class="col-9">
+        <div class="day-grid"></div>
+      </div>
+    </div>
+    <div class="row m-2">
+      <div class="col-12 m-2">
+        <button type="input" id="submitBtn" name"submitBtn">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  {{!-- Create day modal to pop up when daysquare is clicked --}}
+
+  <div id="dayModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="class" class="close">&times;</span>
+      <p>Rate your symptom from 1-10</p>
+      <div class="rating-area"></div>
+    </div>
+
+  </div>
+
+
+  <div class="row m-2">
+    <div class="col-12 m-2">
+      <h2><a class="logout" href="/logout">Logout</a></h2>
+    </div>
+  </div>
+</div>
