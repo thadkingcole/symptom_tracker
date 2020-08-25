@@ -3,7 +3,6 @@ const path = require("path");
 
 // require db for sequelize
 const db = require("../models");
-const { Op } = require("sequelize");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -37,7 +36,7 @@ module.exports = function (app) {
         userId: userData.id,
         createdAt: {
           // between 6 days ago and time route is hit
-          [Op.between]: [sixDaysAgo, now],
+          [db.Sequelize.Op.between]: [sixDaysAgo, now],
         },
       },
     });
