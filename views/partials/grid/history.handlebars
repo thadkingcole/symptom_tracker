@@ -1,8 +1,11 @@
 <p>
   {{#each symptomData}}
-    | {{this.dataValues.createdAt}} |
-    <ul>
-      <li>{{this.dataValues.runnyNose}}</li>
-    </ul>
-  {{/each}}
+  | {{this.dataValues.createdAt}} |
+<ul>
+  <li>{{this.dataValues.runnyNose}}</li>
+  <li>{{this.dataValues.cough}}</li>
+  <li>{{this.dataValues.mood}}</li>
+  <li>{{this.dataValues.updatedAt}}</li>
+</ul>
+{{/each}}
 </p>
