@@ -25,7 +25,18 @@ module.exports = function (app) {
         id: req.user.id,
       },
     });
+    const symptomData = await db.Symptom.findAll({
+      where: {
+        userId: userData.id,
+      },
+      // TODO limit results to most recent 5
+    });
+    console.log(symptomData);
     // show user data on the user's homepage
-    res.render("userhome", { email: userData.email, id: userData.id });
+    res.render("userhome", {
+      email: userData.email,
+      id: userData.id,
+      symptomData,
+    });
   });
 };
