@@ -1,10 +1,16 @@
 {{#each symptomData}}
-
-<ul>
-  <p>| {{this.dataValues.createdAt}} |</p>
-  <li>{{this.dataValues.runnyNose}}</li>
-  <li>{{this.dataValues.cough}}</li>
-  <li>{{this.dataValues.mood}}</li>
-  <li>{{this.dataValues.updatedAt}}</li>
-</ul>
+<div class="row border bg-secondary text-white rounded w-75">
+  <div class="col-9">
+    <p>| {{this.dataValues.createdAt}} |</p>
+  </div>
+  <div class="col-3">
+    <button type="button" id="viewHistory">View History</button>
+  </div>
+  {{!-- <ul>
+    <li>{{this.dataValues.runnyNose}}</li>
+    <li>{{this.dataValues.cough}}</li>
+    <li>{{this.dataValues.mood}}</li>
+    <li>{{this.dataValues.updatedAt}}</li>
+  </ul> --}}
+</div>
 {{/each}}
