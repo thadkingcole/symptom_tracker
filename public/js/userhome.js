@@ -25,6 +25,7 @@ $(document).ready(() => {
       dateGrid.appendChild(dateSquare);
     }
   }
+
   // function createMonthGrid() {
   //   for (let i = 0; i < 12; i++) {
   //     const monthSquare = document.createElement("div");
@@ -36,17 +37,23 @@ $(document).ready(() => {
   //   }
   // }
   function createDayGrid() {
-    for (i = 1; i < 8; i++) {
-      const daySquare = document.createElement("div");
-      daySquare.classList.add("day");
-      daySquare.setAttribute("id", "day_" + i);
-      dayGrid.appendChild(daySquare);
-      daySquares.push(daySquare);
-
-      daySquare.addEventListener("click", () => {
-        dayClick(daySquare);
-      });
-    }
+    fetch("/api/symptoms")
+      .then(function (res) {
+        return res.json()
+      })
+      .then(function (results) {
+        console.log(results)
+        for (i = 1; i < results.length; i++) {
+          const daySquare = document.createElement("div");
+          daySquare.classList.add("day");
+          daySquare.setAttribute("id", "day_" + i);
+          dayGrid.appendChild(daySquare);
+          daySquares.push(daySquare);
+          daySquare.addEventListener("click", () => {
+            dayClick(daySquare);
+          });
+        }
+      })
   }
   function dayClick() {
     modal.style.display = "block";

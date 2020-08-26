@@ -16,7 +16,15 @@ module.exports = function (app) {
       id: req.user.id,
     });
   });
-
+  app.get("/api/symptoms", (req, res) => {
+    db.Symptom.findAll({
+      where: {
+        userId: req.user.id
+      }
+    }).then(results => {
+      res.json(results)
+    })
+  })
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
