@@ -1,11 +1,17 @@
 <header class="jumbotron jumbotron-fluid bg-maroon">
   <div class="container">
-    <h1 class="display-4">Welcome to Myriad!</h1>
-
-    <h5>Please remember to fill out your daily check-in.</h5>
-
+    <h1>Welcome to Myriad, {{email}}!</h1>
+    <ul class="nav">
+      <li class="nav-item">
+        <a id="checkIn" class="nav-link text-warning" href="#">Daily Check-in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-warning" href="/logout">Logout</a>
+      </li>
+    </ul>
   </div>
 </header>
+
 <div class="container">
 
   <div class="row">
@@ -33,7 +39,6 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <h2><a class="logout" href="/logout">Logout</a></h2>
     </div>
   </div>
 </div>
@@ -42,16 +47,11 @@
 {{!-- Create day modal to pop up when daysquare is clicked --}}
 
 <div id="dayModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content p-4">
     <span id="class" class="close">&times;</span>
     <p>{{> forms/symptoms}}</p>
-
-    {{!-- <p>Rate your symptom from 1-10</p>
-    <div class="rating-area"></div> --}}
   </div>
-
 </div>
 
 <!-- jQuery -->
