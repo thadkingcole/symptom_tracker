@@ -12,8 +12,18 @@ const db = require("./models");
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 
+const hbs = exphbs.create({
+  // Specify helpers which are only registered on this instance
+  helpers: {
+    // convert date portion of timestamp to string "Thu Aug 20 2020"
+    prettyDate: (dateIn) => {
+      return dateIn.toDateString();
+    },
+  },
+});
+
 // use handlebars as viewer
-app.engine("handlebars", exphbs());
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.use(express.urlencoded({ extended: true }));

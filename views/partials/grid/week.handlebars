@@ -1,0 +1,42 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid maroon;
+  }
+
+  .true {
+    background-color: lightgreen;
+  }
+
+  .false {
+    background-color:
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Runny Nose</th>
+    <th>Cough</th>
+    <th>Nausea</th>
+    <th>Vomitting</th>
+    <th>Bloating</th>
+    <th>Constipation</th>
+    <th>Mood</th>
+    <th>Note</th>
+  </tr>
+  {{#each symptomData}}
+    <tr>
+      <td>{{prettyDate this.dataValues.createdAt}}</td>
+      <td class="{{this.dataValues.runnyNose}}">{{this.dataValues.runnyNose}}</td>
+      <td class="{{this.dataValues.cough}}">{{this.dataValues.cough}}</td>
+      <td class="{{this.dataValues.nausea}}">{{this.dataValues.nausea}}</td>
+      <td class="{{this.dataValues.vomitting}}">{{this.dataValues.vomitting}}</td>
+      <td class="{{this.dataValues.bloating}}">{{this.dataValues.bloating}}</td>
+      <td class="{{this.dataValues.constipation}}">{{this.dataValues.constipation}}</td>
+      <td>{{this.dataValues.mood}}</td>
+      <td>{{this.dataValues.note}}</td>
+    </tr>
+  {{/each}}
+</table>
