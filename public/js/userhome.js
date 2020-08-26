@@ -38,11 +38,11 @@ $(document).ready(() => {
   // }
   function createDayGrid() {
     fetch("/api/symptoms")
-      .then(function (res) {
-        return res.json()
+      .then((res) => {
+        return res.json();
       })
-      .then(function (results) {
-        console.log(results)
+      .then((results) => {
+        console.log(results);
         for (i = 1; i < 8; i++) {
           const daySquare = document.createElement("div");
           daySquare.classList.add("day");
@@ -53,7 +53,7 @@ $(document).ready(() => {
             dayClick(daySquare);
           });
         }
-      })
+      });
   }
   function dayClick() {
     modal.style.display = "block";
