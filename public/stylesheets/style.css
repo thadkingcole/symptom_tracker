@@ -18,7 +18,7 @@
 .day-grid {
   
   height: 60px;
-  width:  930px;
+  width:  520px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -28,6 +28,18 @@
   display: flex;
   flex-wrap: wrap;
   
+}
+.date-grid {
+  font-size: 10px;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.date{
+  text-align: center;
+  height: 15px;
+  width: 53px;
+  margin: 5px;
 }
 .month {
   text-align: center;
@@ -42,7 +54,8 @@
 .day {
   text-align: center;
   height: 30px;
-  width:30px;
+  width:60px;
+  margin: 3px;
   border: 1px solid black;
   
 }
@@ -51,6 +64,7 @@
   background-color: rgb(168, 168, 255);
 }
 .symptom {
+  margin: 3px;
   height: 30px;
   width: 160px;
   border: 1px solid black;
