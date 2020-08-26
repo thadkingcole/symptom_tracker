@@ -43,7 +43,7 @@ $(document).ready(() => {
       })
       .then(function (results) {
         console.log(results)
-        for (i = 1; i < results.length; i++) {
+        for (i = 1; i < 8; i++) {
           const daySquare = document.createElement("div");
           daySquare.classList.add("day");
           daySquare.setAttribute("id", "day_" + i);
