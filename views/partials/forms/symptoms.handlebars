@@ -1,49 +1,47 @@
 <form action="/api/user_data" method="post">
   <h2>Select symptoms experienced today:</h2>
- <div>
-  <div class="row">
-    <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="runnyNose" value="true" name="runnyNose">
-    <label class="form-check-label" for="runnyNose"><i class="fas fa-head-side-mask">Runny Nose</i></label>
+  <div>
+    <div class="row d-flex p-4">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="runnyNose" value="true" name="runnyNose">
+        <label class="form-check-label" for="runnyNose"><i class="fas fa-head-side-mask">Runny Nose</i></label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="cough" value="true" name="cough">
+        <label class="form-check-label" for="cough"><i class="fas fa-head-side-mask">Cough</i></label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="nausea" value="true" name="nausea">
+        <label class="form-check-label" for="nausea"><i class="fas fa-head-side-mask">Nausea</i></label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="vomitting" value="true" name="vomitting">
+        <label class="form-check-label" for="vomitting"><i class="fas fa-head-side-mask">Vomitting</i></label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="bloating" value="true" name="bloating">
+        <label class="form-check-label" for="bloating"><i class="fas fa-head-side-mask">Bloating</i></label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="constipation" value="true" name="constipation">
+        <label class="form-check-label" for="constipation"><i class="fas fa-head-side-mask">Constipation</i></label>
+      </div>
     </div>
-    <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="cough" value="true" name="cough">
-    <label class="form-check-label" for="cough"><i class="fas fa-head-side-mask">Cough</i></label>
+
+    <div class="form-group">
+      <label for="mood">Mood</label>
+      <select class="form-control" id="mood" name="mood">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </div>
-    <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="nausea" value="true" name="nausea">
-    <label class="form-check-label" for="nausea"><i class="fas fa-head-side-mask">Nausea</i></label>
-    </div> 
+    <div class="form-group">
+      <label for="note">Other symptoms/notes:</label>
+      <input type="text" class="form-control" id="note" name="note">
+    </div>
+    <button type="submit" class="btn bg-maroon">Submit</button>
   </div>
-  <div class="row">
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="vomitting" value="true" name="vomitting">
-      <label class="form-check-label" for="vomitting"><i class="fas fa-head-side-mask">Vomitting</i></label>
-    </div> 
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="bloating" value="true" name="bloating">
-      <label class="form-check-label" for="bloating"><i class="fas fa-head-side-mask">Bloating</i></label>
-    </div> 
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="constipation" value="true" name="constipation">
-      <label class="form-check-label" for="constipation"><i class="fas fa-head-side-mask">Constipation</i></label>
-    </div> 
-  </div> 
-    
-  <div class="form-group">
-    <label for="mood">Mood</label>
-    <select class="form-control" id="mood" name="mood">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="note">Other symptoms/notes:</label>
-    <input type="text" class="form-control" id="note" name="note">
-  </div>
-  <button type="submit" class="btn bg-maroon">Submit</button>
-</div>
 </form>
