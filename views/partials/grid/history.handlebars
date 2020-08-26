@@ -1,37 +1,11 @@
 {{#each symptomData}}
-<div class="row border bg-secondary text-white rounded w-75">
+<div class="row border bg-secondary text-white rounded w-75 m-2">
   <div class="col-9">
     <p>| {{this.dataValues.createdAt}} |</p>
   </div>
   <div class="col-3">
     <button type="button" id="viewHistory">View History</button>
   </div>
-
-  {{!-- <ul>
-    <li>{{this.dataValues.runnyNose}}</li>
-    <li>{{this.dataValues.cough}}</li>
-    <li>{{this.dataValues.mood}}</li>
-    <li>{{this.dataValues.updatedAt}}</li>
-  </ul> --}}
-
-
-  {{!-- daily check in form --}}
-  {{!-- TODO place form within modal or other page --}}
-  <div class="row">
-    <div class="col-7 mb-5">
-      {{!-- add the below to add the form to the page --}}
-      {{> forms/symptoms}}
-    </div>
-  </div>
-  <hr>
-  {{!-- end of form --}}
-
-  <div class="row">
-    <div class="col">
-      {{> grid/history}}
-    </div>
-  </div>
-</div>
 </div>
 {{/each}}
 <!-- Modal -->
