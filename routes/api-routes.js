@@ -19,7 +19,7 @@ module.exports = function (app) {
   app.get("/api/symptoms", (req, res) => {
     db.Symptom.findAll({
       where: {
-        userId: req.user.id;
+        userId: req.user.id,
       },
     }).then((results) => {
       res.json(results);
