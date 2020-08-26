@@ -11,20 +11,20 @@ $(document).ready(() => {
   const symptomSquares = [];
 
 
-  const monthArray = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
+  // const monthArray = [
+  //   "January",
+  //   "February",
+  //   "March",
+  //   "April",
+  //   "May",
+  //   "June",
+  //   "July",
+  //   "August",
+  //   "September",
+  //   "October",
+  //   "November",
+  //   "December"
+  // ];
   const symptomArray = [
     "Cough",
     "Mental Health",
@@ -43,22 +43,21 @@ $(document).ready(() => {
       dateGrid.appendChild(dateSquare);
     }
   }
-  function createMonthGrid() {
-    for (let i = 0; i < 12; i++) {
-      const monthSquare = document.createElement("div");
-      monthSquare.innerHTML = monthArray[i];
-      monthSquare.classList.add("month");
-      monthSquare.setAttribute("id", monthArray[i]);
-      monthGrid.appendChild(monthSquare);
-      monthSquares.push(monthSquare);
-    }
-  }
+  // function createMonthGrid() {
+  //   for (let i = 0; i < 12; i++) {
+  //     const monthSquare = document.createElement("div");
+  //     monthSquare.innerHTML = monthArray[i];
+  //     monthSquare.classList.add("month");
+  //     monthSquare.setAttribute("id", monthArray[i]);
+  //     monthGrid.appendChild(monthSquare);
+  //     monthSquares.push(monthSquare);
+  //   }
+  // }
   function createDayGrid() {
     for (i = 1; i < 8; i++) {
       const daySquare = document.createElement("div");
       daySquare.classList.add("day");
       daySquare.setAttribute("id", "day_" + i);
-      daySquare.innerHTML = i;
       dayGrid.appendChild(daySquare);
       daySquares.push(daySquare);
 
@@ -104,7 +103,7 @@ $(document).ready(() => {
   dayModal();
   showDates();
   createSymptomGrid();
-  createMonthGrid();
+  // createMonthGrid();
   createDayGrid();
   createDayGrid();
   createDayGrid();

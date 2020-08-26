@@ -30,16 +30,17 @@
   
 }
 .date-grid {
-  font-size: 10px;
+  font-size: 14px;
   height: 30px;
+  width: 550px;
   display: flex;
   flex-wrap: wrap;
 }
 .date{
   text-align: center;
   height: 15px;
-  width: 53px;
-  margin: 5px;
+  width: 66px;
+  padding: 5px;
 }
 .month {
   text-align: center;
