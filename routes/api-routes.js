@@ -39,7 +39,12 @@ module.exports = function (app) {
     const dailyLog = {
       runnyNose: req.body.runnyNose,
       cough: req.body.cough,
+      nausea: req.body.nausea,
+      vomitting: req.body.vomitting,
+      bloating: req.body.bloating,
+      constipation: req.body.constipation,
       mood: req.body.mood,
+      note: req.body.note,
       UserId: req.user.id,
     };
     db.Symptom.create(dailyLog).then(() => {
