@@ -1,30 +1,12 @@
 $(document).ready(() => {
   const modal = document.getElementById("dayModal");
   const span = document.getElementById("class");
-  const monthGrid = document.querySelector(".month-grid");
   const dayGrid = document.querySelector(".day-grid");
   const symptomGrid = document.querySelector(".symptom-grid");
   const ratingArea = document.querySelector(".rating-area");
   const dateGrid = document.querySelector(".date-grid");
-  const monthSquares = [];
   const daySquares = [];
   const symptomSquares = [];
-
-
-  // const monthArray = [
-  //   "January",
-  //   "February",
-  //   "March",
-  //   "April",
-  //   "May",
-  //   "June",
-  //   "July",
-  //   "August",
-  //   "September",
-  //   "October",
-  //   "November",
-  //   "December"
-  // ];
   const symptomArray = [
     "Cough",
     "Mental Health",
