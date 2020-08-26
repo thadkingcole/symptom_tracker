@@ -2,11 +2,27 @@ module.exports = function (sequelize, DataTypes) {
   const Symptom = sequelize.define("Symptom", {
     runnyNose: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false, // if not checked
+      defaultValue: false,
     },
     cough: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false, // if not checked
+      defaultValue: false,
+    },
+    nausea: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    vomitting: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    bloating: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    constipation: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     mood: {
       type: DataTypes.INTEGER,
@@ -14,6 +30,13 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         min: 1,
         max: 5,
+      },
+    },
+    note: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [0, 160],
       },
     },
   });
