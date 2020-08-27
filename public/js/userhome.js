@@ -3,7 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const span = document.getElementById("class");
   const checkIn = document.getElementById("checkIn");
   const moodDiv = document.getElementById("mood");
+  const noteBtn = document.getElementById("noteBtn");
 
+
+
+  function noteButton() {
+    console.log(noteBtn);
+    noteBtn.addEventListener("click", () => {
+      alert("add notes modal here");
+    });
+  }
   function moodColors() {
     console.log(moodDiv.innerHTML);
     if (moodDiv.innerHTML == 1) {
@@ -36,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   }
+  noteButton();
   dayModal();
   dailyCheckIn();
   moodColors();
