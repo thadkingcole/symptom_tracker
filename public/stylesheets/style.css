@@ -16,7 +16,9 @@ body {
 .border-maroon {
   border-left: 1px solid maroon;
 }
-
+#symptom_table {
+  background-color: #fcfafa;
+}
 table,
 th,
 td {

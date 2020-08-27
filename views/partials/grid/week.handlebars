@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-4 m-1">
-    <table>
+    <table id="symptom_table">
       <tr>
         <td style="height: 51px">Date</td>
       </tr>
@@ -31,7 +31,7 @@
     </table>
   </div>
   <div class="col-6 m-1">
-    <table>
+    <table style="background-color: #fcfafa">
       {{#each symptomData}}
       <tr>
         <td>{{prettyDate this.dataValues.createdAt}}</td>
