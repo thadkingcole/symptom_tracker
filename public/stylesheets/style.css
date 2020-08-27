@@ -1,16 +1,35 @@
 /* Maroon colors */
+body {
+  background-color: #5a464c; 
+}
+#createdAt {
+  height: 51px;
+}
+.mood {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #dbd8d8;
+}
 .bg-maroon {
   background-color: maroon;
-  color: white;
+  color: #fcfafa;
 }
 
 .border-maroon {
   border-left: 1px solid maroon;
 }
-
+#symptom_table {
+  background-color: rgb(221, 221, 221);
+}
+#symptomData {
+  background-color:rgb(182, 182, 182);
+  
+}
 table,
 th,
 td {
+  height: 30px;
   border: 1px solid maroon;
 }
 

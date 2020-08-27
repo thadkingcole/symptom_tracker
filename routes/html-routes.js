@@ -20,7 +20,7 @@ module.exports = function (app) {
   app.get("/members", isAuthenticated, async (req, res) => {
     // time stamps used for date comparisons
     const now = new Date();
-    const sixDaysAgo = new Date(now - 6 * 24 * 60 * 60 * 1000);
+    const lastWeek = new Date(now - 7 * 24 * 60 * 60 * 1000);
 
     // get user account data to be shown on user's home page
     const userData = await db.User.findOne({
@@ -35,7 +35,7 @@ module.exports = function (app) {
         userId: userData.id,
         createdAt: {
           // between 6 days ago and time route is hit
-          [db.Sequelize.Op.between]: [sixDaysAgo, now],
+          [db.Sequelize.Op.between]: [lastWeek, now],
         },
       },
     });

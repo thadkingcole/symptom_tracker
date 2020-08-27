@@ -1,26 +1,60 @@
-<table>
+<table id="symptom_table">
   <tr>
-    <th>Date</th>
-    <th>Runny Nose</th>
-    <th>Cough</th>
-    <th>Nausea</th>
-    <th>Vomitting</th>
-    <th>Bloating</th>
-    <th>Constipation</th>
-    <th>Mood</th>
-    <th>Note</th>
+    <td style="height: 51px">Date</td>
   </tr>
-  {{#each symptomData}}
-    <tr>
-      <td>{{prettyDate this.dataValues.createdAt}}</td>
-      <td class="{{this.dataValues.runnyNose}}"></td>
-      <td class="{{this.dataValues.cough}}"></td>
-      <td class="{{this.dataValues.nausea}}"></td>
-      <td class="{{this.dataValues.vomitting}}"></td>
-      <td class="{{this.dataValues.bloating}}"></td>
-      <td class="{{this.dataValues.constipation}}"></td>
-      <td>{{this.dataValues.mood}}</td>
-      <td>{{this.dataValues.note}}</td>
-    </tr>
-  {{/each}}
+  <tr>
+    <td>Runny Nose</td>
+  </tr>
+  <tr>
+    <td>Cough</td>
+  </tr>
+  <tr>
+    <td>Nausea</td>
+  </tr>
+  <tr>
+    <td>Vommitting</td>
+  </tr>
+  <tr>
+    <td>Bloating</td>
+  </tr>
+  <tr>
+    <td>Constipation</td>
+  </tr>
+  <tr>
+    <td>Mood</td>
+  </tr>
+  <tr>
+    <td>Notes:</td>
+  </tr>
 </table>
+{{#each symptomData}}
+<table id="symptomData">
+  <tr>
+    <td id="createdAt">{{prettyDate this.dataValues.createdAt}}</td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.runnyNose}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.cough}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.nausea}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.vomitting}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.bloating}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.constipation}}"></td>
+  </tr>
+  <tr>
+    <td class="mood" id="mood">{{this.dataValues.mood}}</td>
+  </tr>
+  <tr>
+    <td><button id="noteBtn" type="button">Notes</button></td>
+  </tr>
+</table>
+{{/each}}
