@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const moodDiv = document.querySelectorAll(".mood");
   const noteBtn = document.getElementById("noteBtn");
 
-
-
   function noteButton() {
     console.log(noteBtn);
     noteBtn.addEventListener("click", () => {
