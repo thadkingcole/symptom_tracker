@@ -11,7 +11,9 @@
 table,
 th,
 td {
+  height: 30px;
   border: 1px solid maroon;
+  border-collapse: collapse;
 }
 
 /* background color for symptoms reported as true */
