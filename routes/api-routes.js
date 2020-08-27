@@ -5,6 +5,9 @@ const passport = require("../config/passport");
 // require moment for date comparisons
 const moment = require("moment");
 
+// export to csv required module
+const csvStringify = require("csv-stringify");
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -19,13 +22,20 @@ module.exports = function (app) {
       id: req.user.id,
     });
   });
-  app.get("/api/symptoms", (req, res) => {
+  // route for exporting data to csv
+  app.get("/api/symptoms", isAuthenticated, (req, res) => {
     db.Symptom.findAll({
       where: {
         userId: req.user.id,
       },
     }).then((results) => {
-      res.json(results);
+      const jsonData = JSON.parse(JSON.stringify(results));
+      csvStringify(jsonData, { header: true }).pipe(res);
+      res.setHeader("Content-Type", "text/csv");
+      res.setHeader(
+        "Content-Disposition",
+        `attachment; filename=\"myriad-symptoms-${Date.now()}.csv"`
+      );
     });
   });
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
