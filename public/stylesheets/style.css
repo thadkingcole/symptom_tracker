@@ -1,7 +1,16 @@
 /* Maroon colors */
+body {
+  background-color: #5a464c; 
+}
+.mood {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #fcfafa;
+}
 .bg-maroon {
   background-color: maroon;
-  color: white;
+  color: #fcfafa;
 }
 
 .border-maroon {
