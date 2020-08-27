@@ -49,6 +49,7 @@ module.exports = function (app) {
     const startOfDay = moment().startOf("day").toDate();
     const endOfDay = moment().endOf("day").toDate();
     const dailyLog = req.body;
+    dailyLog.UserId = req.user.id;
     // has an entry already been created today?
     const recordedLog = await db.Symptom.findOne({
       where: {
@@ -70,8 +71,8 @@ module.exports = function (app) {
 
     // user has no prior entries today, or its been deleted
     // create new entry
-    db.Symptom.create({ ...dailyLog, UserId: req.user.id }).then(() => {
-      console.log("new:", { ...dailyLog, UserId: req.user.id });
+    db.Symptom.create(dailyLog).then(() => {
+      console.log("new:", dailyLog);
       console.log(recordedLog);
       // 201 means created, then reload page
       res.status(201).redirect("/members");
