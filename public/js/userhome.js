@@ -5,6 +5,7 @@ $(document).ready(() => {
   const symptomGrid = document.querySelector(".symptom-grid");
   const ratingArea = document.querySelector(".rating-area");
   const dateGrid = document.querySelector(".date-grid");
+  const checkIn = document.getElementById("checkIn");
   const daySquares = [];
   const symptomSquares = [];
   const symptomArray = [
@@ -21,6 +22,7 @@ $(document).ready(() => {
     for (let i = 0; i < 7; i++) {
       const dateSquare = document.createElement("div");
       dateSquare.classList.add("date");
+      // @ts-ignore
       dateSquare.innerHTML = moment().add(i, "days").format("MM DD YY");
       dateGrid.appendChild(dateSquare);
     }
@@ -43,27 +45,29 @@ $(document).ready(() => {
       })
       .then((results) => {
         console.log(results);
-        for (i = 1; i < 8; i++) {
+        for (let i = 1; i < 8; i++) {
           const daySquare = document.createElement("div");
           daySquare.classList.add("day");
           daySquare.setAttribute("id", "day_" + i);
           dayGrid.appendChild(daySquare);
           daySquares.push(daySquare);
-          daySquare.addEventListener("click", () => {
-            dayClick(daySquare);
-          });
         }
       });
   }
   function dayClick() {
     modal.style.display = "block";
-    for (i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       const rateSquares = document.createElement("div");
       rateSquares.classList.add("rate");
-      rateSquares.setAttribute("id", i);
-      rateSquares.innerHTML = i;
+      rateSquares.setAttribute("id", i.toString());
+      rateSquares.innerHTML = i.toString();
       ratingArea.appendChild(rateSquares);
     }
+  }
+  function dailyCheckIn() {
+    // add event listener to daily check-in link
+    // then display form in modal
+    checkIn.addEventListener("click", () => dayClick());
   }
   function createSymptomGrid() {
     for (let i = 0; i < 7; i++) {
@@ -86,6 +90,7 @@ $(document).ready(() => {
     };
   }
   dayModal();
+  dailyCheckIn();
   showDates();
   createSymptomGrid();
   createDayGrid();
