@@ -2,6 +2,9 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
+// require moment for date comparisons
+const moment = require("moment");
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -16,7 +19,15 @@ module.exports = function (app) {
       id: req.user.id,
     });
   });
-
+  app.get("/api/symptoms", (req, res) => {
+    db.Symptom.findAll({
+      where: {
+        userId: req.user.id,
+      },
+    }).then((results) => {
+      res.json(results);
+    });
+  });
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -34,20 +45,35 @@ module.exports = function (app) {
   });
 
   // Route for adding data to symtom table for a logged in user
-  app.post("/api/user_data", isAuthenticated, (req, res) => {
-    console.log(req.body);
-    const dailyLog = {
-      runnyNose: req.body.runnyNose,
-      cough: req.body.cough,
-      nausea: req.body.nausea,
-      vomitting: req.body.vomitting,
-      bloating: req.body.bloating,
-      constipation: req.body.constipation,
-      mood: req.body.mood,
-      note: req.body.note,
-      UserId: req.user.id,
-    };
+  app.post("/api/user_data", isAuthenticated, async (req, res) => {
+    const startOfDay = moment().startOf("day").toDate();
+    const endOfDay = moment().endOf("day").toDate();
+    const dailyLog = req.body;
+    dailyLog.UserId = req.user.id;
+    // has an entry already been created today?
+    const recordedLog = await db.Symptom.findOne({
+      where: {
+        UserId: req.user.id,
+        createdAt: {
+          [db.Sequelize.Op.between]: [startOfDay, endOfDay],
+        },
+      },
+    });
+
+    if (recordedLog) {
+      // user has already created a log, but is sending another
+      // need to delete the log so that the new data is logged correctly
+      // and we remain at only 1 entry per day
+      db.Symptom.destroy({
+        where: { id: recordedLog.dataValues.id },
+      }).then(console.log("overwrite:", recordedLog));
+    }
+
+    // user has no prior entries today, or its been deleted
+    // create new entry
     db.Symptom.create(dailyLog).then(() => {
+      console.log("new:", dailyLog);
+      console.log(recordedLog);
       // 201 means created, then reload page
       res.status(201).redirect("/members");
     });
