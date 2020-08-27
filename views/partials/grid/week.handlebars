@@ -1,68 +1,60 @@
-<div class="row">
-  <div class="col-3">
-    <table id="symptom_table">
-      <tr>
-        <td style="height: 51px">Date</td>
-      </tr>
-      <tr>
-        <td>Runny Nose</td>
-      </tr>
-      <tr>
-        <td>Cough</td>
-      </tr>
-      <tr>
-        <td>Nausea</td>
-      </tr>
-      <tr>
-        <td>Vommitting</td>
-      </tr>
-      <tr>
-        <td>Bloating</td>
-      </tr>
-      <tr>
-        <td>Constipation</td>
-      </tr>
-      <tr>
-        <td>Mood</td>
-      </tr>
-      <tr>
-        <td>Notes:</td>
-      </tr>
-    </table>
-  </div>
-  {{#each symptomData}}
-  <div class="col-3">
-    <table style="background-color: #fcfafa">
-
-      <tr>
-        <td>{{prettyDate this.dataValues.createdAt}}</td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.runnyNose}}"></td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.cough}}"></td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.nausea}}"></td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.vomitting}}"></td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.bloating}}"></td>
-      </tr>
-      <tr>
-        <td class="{{this.dataValues.constipation}}"></td>
-      </tr>
-      <tr>
-        <td class="mood" id="mood">{{this.dataValues.mood}}</td>
-      </tr>
-      <tr>
-        <td><button id="noteBtn" type="button">Notes</button></td>
-      </tr>
-
-    </table>
-  </div>
-  {{/each}}
-</div>
+<table id="symptom_table">
+  <tr>
+    <td style="height: 51px">Date</td>
+  </tr>
+  <tr>
+    <td>Runny Nose</td>
+  </tr>
+  <tr>
+    <td>Cough</td>
+  </tr>
+  <tr>
+    <td>Nausea</td>
+  </tr>
+  <tr>
+    <td>Vommitting</td>
+  </tr>
+  <tr>
+    <td>Bloating</td>
+  </tr>
+  <tr>
+    <td>Constipation</td>
+  </tr>
+  <tr>
+    <td>Mood</td>
+  </tr>
+  <tr>
+    <td>Notes:</td>
+  </tr>
+</table>
+{{#each symptomData}}
+<table id="sypmtomData" style="background-color: #fcfafa">
+  <tr>
+    <td id="createdAt">{{prettyDate this.dataValues.createdAt}}</td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.runnyNose}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.cough}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.nausea}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.vomitting}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.bloating}}"></td>
+  </tr>
+  <tr>
+    <td class="{{this.dataValues.constipation}}"></td>
+  </tr>
+  <tr>
+    <td class="mood" id="mood">{{this.dataValues.mood}}</td>
+  </tr>
+  <tr>
+    <td><button id="noteBtn" type="button">Notes</button></td>
+  </tr>
+</table>
+{{/each}}

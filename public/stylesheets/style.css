@@ -1,6 +1,10 @@
 /* Maroon colors */
 body {
+  
   background-color: #5a464c; 
+}
+#createdAt {
+  height: 51px;
 }
 .mood {
   font-size: 18px;
@@ -18,6 +22,9 @@ body {
 }
 #symptom_table {
   background-color: #fcfafa;
+  border-collapse: collapse;
+}#symptomData {
+  border-collapse: collapse;
 }
 table,
 th,
