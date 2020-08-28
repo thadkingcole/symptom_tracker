@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (moodDiv[i].textContent === "2") {
         moodDiv[i].style.backgroundColor = "orange";
       } else if (moodDiv[i].textContent === "3") {
-        moodDiv[i].style.backgroundColor = "blue";
-      } else if (moodDiv[i].textContent === "4") {
         moodDiv[i].style.backgroundColor = "yellow";
+      } else if (moodDiv[i].textContent === "4") {
+        moodDiv[i].style.backgroundColor = "blue";
       } else if (moodDiv[i].textContent === "5") {
         moodDiv[i].style.backgroundColor = "green";
       }
