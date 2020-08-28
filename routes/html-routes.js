@@ -4,6 +4,9 @@ const path = require("path");
 // require db for sequelize
 const db = require("../models");
 
+// require moment for date comparisons
+const moment = require("moment");
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -20,7 +23,7 @@ module.exports = function (app) {
   app.get("/members", isAuthenticated, async (req, res) => {
     // time stamps used for date comparisons
     const now = new Date();
-    const lastWeek = new Date(now - 7 * 24 * 60 * 60 * 1000);
+    const lastWeek = moment(now).startOf("day").subtract(6, "days").toDate();
 
     // get user account data to be shown on user's home page
     const userData = await db.User.findOne({
@@ -38,6 +41,8 @@ module.exports = function (app) {
           [db.Sequelize.Op.between]: [lastWeek, now],
         },
       },
+      // sorts by createdAt timestamp from earliest to latest
+      order: db.Sequelize.literal("createdAt ASC"),
     });
 
     // show user data on the user's homepage

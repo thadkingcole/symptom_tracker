@@ -6,13 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const noteBtn = document.getElementById("noteBtn");
 
   function noteButton() {
-    console.log(noteBtn);
     noteBtn.addEventListener("click", () => {
       alert("add notes modal here");
     });
   }
   function moodColors() {
-    console.log(moodDiv[0].textContent);
     for (let i = 0; i < moodDiv.length; i++) {
       if (moodDiv[i].textContent === "1") {
         moodDiv[i].style.backgroundColor = "red";
