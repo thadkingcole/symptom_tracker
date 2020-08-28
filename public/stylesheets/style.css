@@ -1,7 +1,4 @@
 /* Maroon colors */
-body {
-  background-color: #5a464c; 
-}
 #createdAt {
   height: 51px;
 }
@@ -30,7 +27,7 @@ table,
 th,
 td {
   height: 30px;
-  border: 1px solid maroon;
+  border: 1px solid black;
 }
 
 /* background color for symptoms reported as true */
