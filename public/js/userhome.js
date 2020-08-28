@@ -3,14 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const span = document.getElementById("class");
   const checkIn = document.getElementById("checkIn");
   const moodDiv = document.querySelectorAll(".mood");
-  const noteBtn = document.getElementById("noteBtn");
+  const noteBtn = document.querySelectorAll("#noteBtn");
   const noteModalEl = document.getElementById("noteModal");
   const span2 = document.getElementById("classic");
 
   function noteButton() {
-    noteBtn.addEventListener("click", () => {
-      noteModalEl.style.display = "block";
-    });
+    for (let i = 0; i < noteBtn.length; i++) {
+      noteBtn[i].addEventListener("click", () => {
+        noteModalEl.style.display = "block";
+      });
+    }
   }
   function moodColors() {
     for (let i = 0; i < moodDiv.length; i++) {
