@@ -23,9 +23,6 @@
   <tr>
     <td>Mood</td>
   </tr>
-  <tr>
-    <td>Notes:</td>
-  </tr>
 </table>
 {{#each symptomData}}
 <table id="symptomData">
@@ -54,7 +51,10 @@
     <td class="mood" id="mood">{{this.dataValues.mood}}</td>
   </tr>
   <tr>
-    <td><button id="noteBtn" type="button">Notes</button></td>
+    <td>
+      <div class="hiddenNote">{{this.dataValues.note}}</div>
+      <button id="noteBtn" type="button">Notes</button>
+    </td>
   </tr>
 </table>
 {{/each}}
