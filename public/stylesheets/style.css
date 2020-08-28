@@ -42,3 +42,7 @@ td {
 /* .false {
   background-color: ;
 } */
+
+.hiddenNote {
+  display: none;
+}

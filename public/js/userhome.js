@@ -6,13 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const noteBtn = document.querySelectorAll("#noteBtn");
   const noteModalEl = document.getElementById("noteModal");
   const span2 = document.getElementById("classic");
+  const hiddenNote = document.querySelectorAll(".hiddenNote");
+  const visibleNote = document.querySelector(".visibleNote");
 
   function noteButton() {
     for (let i = 0; i < noteBtn.length; i++) {
       noteBtn[i].addEventListener("click", () => {
         noteModalEl.style.display = "block";
+        console.log(hiddenNote[i]);
+        visibleNote.innerHTML = hiddenNote[i].textContent;
       });
     }
+
   }
   function moodColors() {
     for (let i = 0; i < moodDiv.length; i++) {
