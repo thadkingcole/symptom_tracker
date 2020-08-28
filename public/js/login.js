@@ -3,6 +3,7 @@ $(document).ready(() => {
   const loginForm = $("form.login");
   const emailInput = $("input#email-login");
   const passwordInput = $("input#password-login");
+  const loginErr = $("<div>");
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", (event) => {
@@ -35,7 +36,13 @@ $(document).ready(() => {
         // If there's an error, log the error
       })
       .catch((err) => {
-        console.log(err);
+        // removes error message if it's already on page
+        loginErr.empty();
+        // add error message to page below login form
+        loginErr.text(
+          `${err.responseText}: Please verify your email & password have been entered correctly`
+        );
+        loginForm.append(loginErr);
       });
   }
 });
