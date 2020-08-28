@@ -25,5 +25,12 @@
       <p>{{> forms/symptoms}}</p>
     </div>
   </div>
+  <div id="noteModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content p-4">
+      <span id="classic" class="close">&times;</span>
+      <p>{{this.dataValues.note}}</p>
+    </div>
+  </div>
   <!-- connect to js -->
   <script src="/js/userhome.js"></script>

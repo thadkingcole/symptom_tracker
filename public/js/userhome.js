@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkIn = document.getElementById("checkIn");
   const moodDiv = document.querySelectorAll(".mood");
   const noteBtn = document.getElementById("noteBtn");
+  const noteModalEl = document.getElementById("noteModal");
+  const span2 = document.getElementById("classic");
 
   function noteButton() {
-    console.log(noteBtn);
     noteBtn.addEventListener("click", () => {
-      alert("add notes modal here");
+      noteModalEl.style.display = "block";
     });
   }
   function moodColors() {
-    console.log(moodDiv[0].textContent);
     for (let i = 0; i < moodDiv.length; i++) {
       if (moodDiv[i].textContent === "1") {
         moodDiv[i].style.backgroundColor = "red";
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
   function dailyCheckIn() {
     // add event listener to daily check-in link
     // then display form in modal
@@ -45,6 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   }
+  function noteModal() {
+    span2.onclick = function () {
+      noteModalEl.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target === noteModalEl) {
+        noteModalEl.style.display = "none";
+      }
+    };
+  }
+  noteModal();
   noteButton();
   dayModal();
   dailyCheckIn();
