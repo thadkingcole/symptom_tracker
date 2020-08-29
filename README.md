@@ -1,12 +1,12 @@
-# [Myriad](https://symptomtracker2.herokuapp.com/)
+# [Myriad](https://myriad-symptom-tracker.herokuapp.com/)
 
-![GitHub top language](https://img.shields.io/github/languages/top/diuguide/symptom_tracker)
-[![GitHub license](https://img.shields.io/github/license/diuguide/symptom_tracker)](LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/thadkingcole/symptom_tracker)
+[![GitHub license](https://img.shields.io/github/license/thadkingcole/symptom_tracker)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-An [express-sequelize-passport app](https://symptomtracker2.herokuapp.com/) that allows the user to track certain symptoms for trending.
+An [express-sequelize-passport app](https://myriad-symptom-tracker.herokuapp.com/) that allows the user to track certain symptoms for trending.
 
-[![screenshot](./public/images/home.png)](https://symptomtracker2.herokuapp.com/)
+[![screenshot](./public/images/home.png)](https://myriad-symptom-tracker.herokuapp.com/)
 
 ## Table of Contents
 
@@ -25,13 +25,13 @@ If you want to set up your own instance of this app, please follow the following
 1. clone this repository using either **ssh**...
 
 ```terminal
-git clone git@github.com:diuguide/symptom_tracker.git
+git clone git@github.com:thadkingcole/symptom_tracker.git
 ```
 
 ...or clone using **https**.
 
 ```terminal
-git clone https://github.com/diuguide/symptom_tracker.git
+git clone https://github.com/thadkingcole/symptom_tracker.git
 ```
 
 2. run ```npm i``` in the cloned repository's root directory to install the node module dependencies.
@@ -44,7 +44,7 @@ git clone https://github.com/diuguide/symptom_tracker.git
 
 ## Usage
 
-To use the app, navigate to <https://symptomtracker2.herokuapp.com/> please follow the following steps.
+To use the app, navigate to <https://myriad-symptom-tracker.herokuapp.com/> please follow the following steps.
 
 1. Create an account with your email and a strong password on the signup form. You will be automatically redirected to the user homepage upon account creation.
 
