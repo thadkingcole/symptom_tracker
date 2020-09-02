@@ -6,7 +6,7 @@
 
 An [express-sequelize-passport app](https://myriad-symptom-tracker.herokuapp.com/) that allows the user to track certain symptoms for trending.
 
-[![screenshot](./public/images/home.png)](https://myriad-symptom-tracker.herokuapp.com/)
+[![screenshot](./public/images/screenshot.png)](https://myriad-symptom-tracker.herokuapp.com/)
 
 ## Table of Contents
 
