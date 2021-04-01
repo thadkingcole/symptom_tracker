@@ -8,16 +8,6 @@ An [express-sequelize-passport app](https://myriad-symptom-tracker.herokuapp.com
 
 [![screenshot](./public/images/screenshot.png)](https://myriad-symptom-tracker.herokuapp.com/)
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 If you want to set up your own instance of this app, please follow the following steps.
@@ -40,8 +30,6 @@ git clone https://github.com/thadkingcole/symptom_tracker.git
 
 1. Start the server by running ```node server.js``` or ```nodemon server.js```. If everything worked correctly, you should be able to see the landing page when navigating to <localhost:8080>.
 
-[back to Table of Contents](#table-of-contents)
-
 ## Usage
 
 To use the app, navigate to <https://myriad-symptom-tracker.herokuapp.com/> please follow the following steps.
@@ -58,7 +46,6 @@ To use the app, navigate to <https://myriad-symptom-tracker.herokuapp.com/> plea
 
 1. To log back in, simply enter the information on the login form you provided during signup to access your account again.
 
-[back to Table of Contents](#table-of-contents)
 
 ## Contributing
 
@@ -66,19 +53,13 @@ Your contribution is most welcome! Please refer to the contributing guidelines w
 
 Please note that this project is released with a [Contributor Code of Conduct](code_of_conduct.md). By Participating in this project, you agree to abide by its terms.
 
-[back to Table of Contents](#table-of-contents)
-
 ## Tests
 
 ```npm test``` performs ESlint to ensure our coding best practices are followed.
 
-[back to Table of Contents](#table-of-contents)
-
 ## Questions
 
 Please direct any and all questions to any of the contributors of this project.
-
-[back to Table of Contents](#table-of-contents)
 
 ## Contributors
 
@@ -86,10 +67,6 @@ Please direct any and all questions to any of the contributors of this project.
 - [thadkingcole](https://github.com/thadkingcole)
 - [summerhealey](https://github.com/summerhealey)
 
-[back to Table of Contents](#table-of-contents)
-
 ## License
 
 [MIT](LICENSE) copyright (c) 2020 Everett Diuguid, Thaddeus Cole, Summer Healey.
-
-[back to Table of Contents](#table-of-contents)
